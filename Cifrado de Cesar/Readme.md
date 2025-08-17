@@ -94,6 +94,7 @@ Saliendo del programa...
 
 
 ## Equipo 3
+- Cruz Miranda Luis Eduardo
 - Domínguez Ríos Luis Daniel
 - Hernández Hernández Deissy Jovita
 
