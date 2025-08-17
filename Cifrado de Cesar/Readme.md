@@ -94,6 +94,7 @@ Saliendo del programa...
 
 
 ## Equipo 3
+- Domínguez Ríos Luis Daniel
 - Hernández Hernández Deissy Jovita
 
 Proyecto desarrollado como ejercicio de clase de Criptografía.
