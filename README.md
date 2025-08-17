@@ -11,13 +11,14 @@
 
 ## 👥 Integrantes del Equipo 3
 
+- Cruz Miranda Luis Eduardo
 - Dominguez Ríos Luis Daniel
 - Hernández Hernández Deissy Jovita
 - Mendoza Rodríguez Ángel Jesús
 - **[Tu Nombre]** - *(Agregar tu nombre aquí)*
 -
 -
--
+
 
 ## 📋 Descripción
 
