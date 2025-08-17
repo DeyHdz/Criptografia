@@ -11,9 +11,9 @@
 
 ## 👥 Integrantes del Equipo 3
 
+- Dominguez Ríos Luis Daniel
 - Hernández Hernández Deissy Jovita
 - **[Tu Nombre]** - *(Agregar tu nombre aquí)*
--
 -
 -
 -
