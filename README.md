@@ -13,6 +13,7 @@
 
 - Dominguez Ríos Luis Daniel
 - Hernández Hernández Deissy Jovita
+- Mendoza Rodríguez Ángel Jesús
 - **[Tu Nombre]** - *(Agregar tu nombre aquí)*
 -
 -
