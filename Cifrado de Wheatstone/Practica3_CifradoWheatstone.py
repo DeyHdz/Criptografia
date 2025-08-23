@@ -108,8 +108,8 @@ def descifrado(mensaje_separado, matriz):
 
 while True:
     print("========= CIFRADO WHEATSTONE =========")
-    # llave = input("Ingresa tu llave\n> ").lower().replace(" ", "")
-    llave = "panconjamon" # llave rápida para pruebas
+    llave = input("Ingresa tu llave\n> ").lower().replace(" ", "")
+    # llave = "panconjamon" # llave rápida para pruebas
     print(f"Tu tabla con tu llave [{llave}]:")
     tablaCifrado = crearMatriz()
     printMatrix(tablaCifrado)
