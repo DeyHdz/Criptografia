@@ -2,16 +2,15 @@
 
 ## Descripción
 
-Este proyecto implementa el algoritmo clásico de **Cifrado César**, una técnica de cifrado por sustitución donde cada letra del texto se desplaza un número fijo de posiciones en el alfabeto. Es uno de los métodos de cifrado más antiguos y simples conocidos.
+Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, es un cifrado por sustitución poligráfica que utiliza una tabla (matriz) de 5×5 y convierte el texto en pares de letras para cifrarlo siguiendo reglas basadas en la posición en la matriz.
 
 ## Características
 
-- ✅ Soporte para el alfabeto español (incluye la letra Ñ)
-- ✅ Preserva mayúsculas y minúsculas
-- ✅ Mantiene caracteres especiales sin modificar (espacios, signos de puntuación, números)
-- ✅ Interfaz de línea de comandos interactiva
-- ✅ Funciones de cifrado y descifrado
-- ✅ Validación de entrada del usuario
+- ✅ Cifrado poligráfico, es decir, no trabaja con letras individuales, sino con pares de letras (dígrafos).
+- ✅ Basado en una clave, esta define la organización de las letras y, por tanto, el resultado del cifrado.
+- ✅ Uso de una matriz reducida (25 letras)
+- ✅ No es monoalfabético, por lo que una misma letra puede cifrarse de distintas formas, dependiendo de la letra que la acompañe.
+
 
 ## Cómo funciona el Cifrado César
 
