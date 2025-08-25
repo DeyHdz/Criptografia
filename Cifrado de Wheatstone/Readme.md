@@ -1,4 +1,4 @@
-# Cifrado César en Python
+# Cifrado Wheatstone en Python
 
 ## Descripción
 
