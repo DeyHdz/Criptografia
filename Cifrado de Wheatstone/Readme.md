@@ -2,99 +2,63 @@
 
 ## Descripción
 
-Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, es un cifrado por sustitución poligráfica que utiliza una tabla (matriz) de 5×5 y convierte el texto en pares de letras para cifrarlo siguiendo reglas basadas en la posición en la matriz.
+Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una técnica de cifrado **poligráfico** que trabaja con **pares de letras (dígrafos)** y utiliza una **matriz 5×5** generada a partir de una palabra o frase **llave**. En esta implementación se unifican las letras **I/J**, para completar las 25 posiciones de la tabla.
 
 ## Características
 
-- ✅ Cifrado poligráfico, es decir, no trabaja con letras individuales, sino con pares de letras (dígrafos).
-- ✅ Basado en una clave, esta define la organización de las letras y, por tanto, el resultado del cifrado.
-- ✅ Uso de una matriz reducida (25 letras)
-- ✅ No es monoalfabético, por lo que una misma letra puede cifrarse de distintas formas, dependiendo de la letra que la acompañe.
+- ✅ Cifrado y descifrado por **pares de letras** (dígrafos).
+- ✅ Construcción de la **matriz 5×5** a partir de una **llave** definida por el usuario.
+- ✅ **Unificación I/J**: la **J** se trata como **I**.
+- ✅ Eliminación automática de **espacios** y conversión a **minúsculas** para el proceso.
+- ✅ Interfaz de **línea de comandos** interactiva.
+- ✅ Implementación de las **tres reglas de Playfair**: misma fila, misma columna y rectángulo.
+- ✅ Impresión de la **tabla** generada para verificación visual.
 
 
-## Cómo funciona el Cifrado César
+## ¿Cómo funciona el Cifrado Wheatstone (Playfair)?
 
-El cifrado César desplaza cada letra del alfabeto un número determinado de posiciones. Por ejemplo, con un corrimiento de 3:
+1. **Tabla 5×5 (clave):**
+   - Se toma la llave (palabra/frase), se eliminan repeticiones y se colocan sus letras en la matriz.
+   - Se completa con el resto del alfabeto (sin **j**) hasta llenar 25 casillas.
+   - La **J** se mapea a **I** durante todo el proceso.
 
-- A → D
-- B → E  
-- C → F
-- ...
-- X → A (vuelve al inicio)
-- Y → B
-- Z → C
+2. **Preparación del mensaje:**
+   - Se eliminan espacios y se convierten a minúsculas.
+   - El mensaje se divide en **pares**. Si el total es impar, se **rellena con 'x'**.
+   - *(Limitación actual)*: esta versión **no** inserta automáticamente una letra de relleno cuando un par contiene **letras iguales** (p.ej., “ll”). Ver **Mejoras/Extensiones**.
+
+3. **Reglas de sustitución (por cada par):**
+   - **Misma columna →** se toma la letra **debajo** (con desplazamiento circular).
+   - **Misma fila →** se toma la letra de la **derecha** (con desplazamiento circular).
+   - **Rectángulo →** se toman las letras en las **esquinas** del rectángulo formado, manteniendo las filas originales e intercambiando columnas.
 
 ## Estructura del código
 
-### Alfabetos utilizados
-```python
-alfabeto_minus = "abcdefghijklmnñopqrstuvwxyz"
-alfabeto_mayus = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-```
+### Archivos
+- `Practica3_CifradoWheatstone.py` — Implementación completa e interfaz CLI.
 
 ### Funciones principales
 
-- **`desplazar_caracter(caracter, corrimiento)`**: Desplaza un carácter individual según el corrimiento especificado
-- **`cifrar(palabra, corrimiento)`**: Cifra una palabra o frase completa
-- **`decifrar(palabra, corrimiento)`**: Descifra una palabra o frase previamente cifrada
+- `crearMatriz()`  
+  Construye y devuelve la **matriz 5×5** según la `llave` global:
+  - Recorre la llave, evita duplicados, unifica `j → i`.
+  - Completa con el alfabeto `abcdefghiklmnopqrstuvwxyz` (sin `j`).
 
-## Uso del programa
+- `printMatrix(matriz)`  
+  Imprime la matriz en consola. Muestra `i/j` cuando corresponde para indicar la unificación.
 
-1. Ejecuta el archivo Python
-2. Ingresa la palabra o frase que deseas procesar
-3. Selecciona la operación:
-   - **[1]** para cifrar
-   - **[2]** para descifrar
-4. Introduce el número de corrimiento (puede ser positivo o negativo)
-5. Obtén el resultado
-6. Decide si quieres realizar otra operación
+- `getRenglonColumna(c, matriz)`  
+  Devuelve `(fila, columna)` de la letra `c` en `matriz`. Si `c == 'j'`, busca la posición de `'i'`.
 
-## Ejemplo de uso
+- `getCaracter(i, j, matriz)`  
+  Devuelve el carácter en la posición `(i, j)` de la matriz.
 
-```
-===== CIFRADO CESAR =====
-Escribe la palabra o frase:
-> Hola Mundo!
+- `separador(mensaje)`  
+  Limpia y separa el texto en **pares**. Si el tamaño es impar, **agrega 'x'** al final.
+  > *Nota:* No divide pares con letras repetidas (p. ej., `ll`).
 
-Elige:
-[1] Cifrar
-[2] Decifrar
-> 1
+- `cifrado(mensaje_separado, matriz)`  
+  Aplica las **reglas Playfair** para **cifrar** cada par.
 
-Corrimiento (número entero):
-> 3
-
-Resultado: Krod Pxqgr!
-
-¿Quieres hacer otra operación? (s/n): n
-Saliendo del programa...
-```
-
-## Requisitos
-
-- Python 3
-- No se requieren librerías adicionales
-
-## Instalación y ejecución
-
-1. Clona o descarga el archivo `cifrado_cesar.py`
-2. Abre una terminal en el directorio del archivo
-3. Ejecuta el comando:
-   ```bash
-   python cifrado_cesar.py
-   ```
-
-## Notas importantes
-
-- El programa utiliza aritmética modular para manejar el "wrap-around" del alfabeto
-- Los caracteres que no son letras (números, espacios, signos de puntuación) permanecen sin cambios
-- El corrimiento puede ser cualquier número entero (positivo o negativo)
-- Para descifrar, se utiliza el corrimiento negativo del valor original
-
-
-## Equipo 3
-- Cruz Miranda Luis Eduardo
-- Domínguez Ríos Luis Daniel
-- Hernández Hernández Deissy Jovita
-
-Proyecto desarrollado como ejercicio de clase de Criptografía.
+- `descifrado(mensaje_separado, matriz)`  
+  Aplica las reglas inversas para **descifrar** cada par.
