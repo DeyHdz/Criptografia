@@ -25,7 +25,6 @@ Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una t�
 2. **Preparación del mensaje:**
    - Se eliminan espacios y se convierten a minúsculas.
    - El mensaje se divide en **pares**. Si el total es impar, se **rellena con 'x'**.
-   - *(Limitación actual)*: esta versión **no** inserta automáticamente una letra de relleno cuando un par contiene **letras iguales** (p.ej., “ll”). Ver **Mejoras/Extensiones**.
 
 3. **Reglas de sustitución (por cada par):**
    - **Misma columna →** se toma la letra **debajo** (con desplazamiento circular).
