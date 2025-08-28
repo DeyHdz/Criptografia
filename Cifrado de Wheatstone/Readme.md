@@ -90,20 +90,19 @@ Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una t�
 
 - El programa **elimina espacios** y convierte todo a **minúsculas**.
 - La letra **J** se trata como **I**. Al imprimir la tabla, se sugiere con `i/j` para mayor claridad visual.
-
-### Aplicación de reglas:
-
-- Columna: (renglón + 1) % 5 para cifrar, (renglón - 1) % 5 para descifrar
-- Renglón: (columna + 1) % 5 para cifrar, (columna - 1) % 5 para descifrar
-- Rectángulo: Intercambio de columnas (igual para cifrar y descifrar)
-
-### Notas importantes
 - El programa utiliza aritmética modular para el wrap-around en la matriz
 - Los caracteres especiales y números son eliminados en el preprocesamiento
 - La llave debe contener solo letras (se procesan automáticamente)
 - Para descifrar correctamente, se debe usar la misma llave utilizada para cifrar
 
-  Equipo 3
+## Aplicación de reglas:
+
+- Columna: (renglón + 1) % 5 para cifrar, (renglón - 1) % 5 para descifrar
+- Renglón: (columna + 1) % 5 para cifrar, (columna - 1) % 5 para descifrar
+- Rectángulo: Intercambio de columnas (igual para cifrar y descifrar)
+
+
+## Equipo 3
 
 - Cruz Miranda Luis Eduardo
 - De la Rosa Lara Gustavo
