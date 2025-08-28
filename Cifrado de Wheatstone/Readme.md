@@ -61,3 +61,54 @@ Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una t�
 
 - `descifrado(mensaje_separado, matriz)`  
   Aplica las reglas inversas para **descifrar** cada par.
+
+  ### Flujo de ejecución (CLI)
+
+1. Se solicita la **llave** y se construye la matriz (`crearMatriz`).
+2. Se muestra la tabla (`printMatrix`).
+3. Se solicita el **mensaje**.
+4. El usuario elige **[1] Cifrar** o **[2] Descifrar**.
+5. Se divide el mensaje en pares (`separador`).
+6. Se ejecuta `cifrado` o `descifrado` y se muestra el resultado.
+7. Se pregunta si desea continuar.
+
+   ### Ejemplo de uso
+
+   <img width="309" height="374" alt="image" src="https://github.com/user-attachments/assets/fe88e91a-f480-470f-b8c3-152d34e58ebe" />
+   <img width="288" height="375" alt="image" src="https://github.com/user-attachments/assets/aa107b1e-b90a-4819-bd85-8e74915ecf5f" />
+
+## Solución implementada (decisiones y objetivos)
+
+- **Unificación I/J** para ajustar a 25 celdas. En todo el flujo, una `j` de entrada se trata como `i`.
+- **Generación determinista de la tabla**: primero **llave sin duplicados**, luego **alfabeto restante** (sin `j`), en orden.
+- **Separación en pares simple** con **relleno final 'x'** si el tamaño es impar.  
+  - *Trade-off:* No se inserta `x` al **romper pares de letras iguales**. Esto simplifica la práctica y hace el flujo más transparente.
+- **Reglas Playfair estándar** implementadas tanto para cifrado como para descifrado.
+- **Interfaz CLI** mínima y clara para experimentar: ingresar llave, ver la tabla, introducir mensaje y escoger la operación.
+
+## Notas importantes
+
+- El programa **elimina espacios** y convierte todo a **minúsculas**.
+- La letra **J** se trata como **I**. Al imprimir la tabla, se sugiere con `i/j` para mayor claridad visual.
+
+### Aplicación de reglas:
+
+- Columna: (renglón + 1) % 5 para cifrar, (renglón - 1) % 5 para descifrar
+- Renglón: (columna + 1) % 5 para cifrar, (columna - 1) % 5 para descifrar
+- Rectángulo: Intercambio de columnas (igual para cifrar y descifrar)
+
+### Notas importantes
+- El programa utiliza aritmética modular para el wrap-around en la matriz
+- Los caracteres especiales y números son eliminados en el preprocesamiento
+- La llave debe contener solo letras (se procesan automáticamente)
+- Para descifrar correctamente, se debe usar la misma llave utilizada para cifrar
+
+  Equipo 3
+
+- Cruz Miranda Luis Eduardo
+- De la Rosa Lara Gustavo
+- Domínguez Ríos Luis Daniel
+- Hernández Hernández Deissy Jovita
+- Mendoza Rodríguez Ángel Jesús
+- Nieto Rodríguez Tomás Andrés
+
