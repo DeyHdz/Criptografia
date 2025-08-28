@@ -86,6 +86,12 @@ Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una t�
 - **Reglas Playfair estándar** implementadas tanto para cifrado como para descifrado.
 - **Interfaz CLI** mínima y clara para experimentar: ingresar llave, ver la tabla, introducir mensaje y escoger la operación.
 
+## Aplicación de reglas:
+
+- Columna: (renglón + 1) % 5 para cifrar, (renglón - 1) % 5 para descifrar
+- Renglón: (columna + 1) % 5 para cifrar, (columna - 1) % 5 para descifrar
+- Rectángulo: Intercambio de columnas (igual para cifrar y descifrar)
+
 ## Notas importantes
 
 - El programa **elimina espacios** y convierte todo a **minúsculas**.
@@ -94,12 +100,6 @@ Este proyecto implementa el algoritmo clásico de **Cifrado Wheatstone**, una t�
 - Los caracteres especiales y números son eliminados en el preprocesamiento
 - La llave debe contener solo letras (se procesan automáticamente)
 - Para descifrar correctamente, se debe usar la misma llave utilizada para cifrar
-
-## Aplicación de reglas:
-
-- Columna: (renglón + 1) % 5 para cifrar, (renglón - 1) % 5 para descifrar
-- Renglón: (columna + 1) % 5 para cifrar, (columna - 1) % 5 para descifrar
-- Rectángulo: Intercambio de columnas (igual para cifrar y descifrar)
 
 
 ## Equipo 3
