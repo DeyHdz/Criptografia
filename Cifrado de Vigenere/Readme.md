@@ -69,5 +69,13 @@ El Cifrado Vigenère utiliza una **clave** que se repite a lo largo del mensaje.
 - El análisis de Kasiski permite obtener la longitud probable de la clave.
 - Este algoritmo es más seguro que el Cifrado César, pero aún vulnerable a criptoanálisis en casos modernos.
 
-  
+  ## Equipo 3
+
+- Cruz Miranda Luis Eduardo
+- De la Rosa Lara Gustavo
+- Domínguez Ríos Luis Daniel
+- Hernández Hernández Deissy Jovita
+- Mendoza Rodríguez Ángel Jesús
+- Nieto Rodríguez Tomás Andrés
+
 
