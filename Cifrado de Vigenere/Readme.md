@@ -49,18 +49,15 @@ El Cifrado Vigenère utiliza una **clave** que se repite a lo largo del mensaje.
 
 ## Ejemplo de uso
 
-## Requisitos
+### Algoritmo criptográfico
+<img width="308" height="393" alt="image" src="https://github.com/user-attachments/assets/ec1118a8-7e99-4289-87fa-28cd3e62d206" />
+<img width="308" height="393" alt="image" src="https://github.com/user-attachments/assets/8fe4026d-11fa-4379-99b2-811792533dc5" />
 
-- Python 3.x
-- No se requieren librerías adicionales.
+### Algoritmo criptoanálisis
+<img width="295" height="379" alt="image" src="https://github.com/user-attachments/assets/8c7b8399-ad65-4cf6-acf8-1e3e81e69a89" />
+<img width="401" height="276" alt="image" src="https://github.com/user-attachments/assets/4b8ae8d0-2297-47ef-be22-c3a5c6122f06" />
 
-## Instalación y ejecución
 
-1. Clona o descarga este archivo `Practica2_CifradoVigenere.py`.
-2. Abre una terminal en el directorio del archivo.
-3. Ejecuta el comando:
-   ```bash
-   python Practica2_CifradoVigenere.py
 
 ## Notas importantes
 
