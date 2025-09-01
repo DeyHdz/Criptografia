@@ -26,6 +26,28 @@ El Cifrado Vigenère utiliza una **clave** que se repite a lo largo del mensaje.
 ### Proceso de Descifrado:
 - El proceso de descifrado es la **inversa** del cifrado, usando el desplazamiento negativo correspondiente.
 
+## Análisis de Kasiski
+
+El **método de Kasiski** es una técnica de **criptoanálisis** que permite estimar la **longitud de la clave** usada en un cifrado Vigenère, sin conocer la clave. Funciona así:
+
+1. **Buscar repeticiones de secuencias**:
+   - Se identifican secuencias de **3 a 5 letras** que se repiten en el texto cifrado.
+   - Solo se consideran aquellas secuencias que aparecen más de una vez.
+
+2. **Medir distancias entre repeticiones**:
+   - Para cada secuencia repetida, se calcula la **distancia (en número de caracteres)** entre sus apariciones.
+
+3. **Calcular divisores comunes**:
+   - Se analiza cada distancia y se buscan sus **divisores enteros**.
+   - Los divisores más frecuentes son **candidatos a ser la longitud de la llave**, porque la clave se repite cada cierto número de caracteres.
+
+4. **Sugerir longitudes de clave**:
+   - El programa muestra un **ranking de longitudes candidatas**, de mayor a menor frecuencia.
+   - Esto permite al usuario intentar descifrar el mensaje usando la longitud de clave sugerida.
+
+> 🔹 Nota: Para que el análisis funcione correctamente, el mensaje cifrado debe ser suficientemente largo y contener **repeticiones de patrones** que generen secuencias cifradas idénticas.
+
+
 ## Estructura del código
 
 ### Funciones principales
@@ -58,13 +80,13 @@ El Cifrado Vigenère utiliza una **clave** que se repite a lo largo del mensaje.
 <img width="401" height="276" alt="image" src="https://github.com/user-attachments/assets/4b8ae8d0-2297-47ef-be22-c3a5c6122f06" />
 
 
-
 ## Notas importantes
 
 - El programa maneja mayúsculas y minúsculas.
 - Los caracteres no alfabéticos son ignorados (espacios, puntuaciones, etc.).
 - El análisis de Kasiski permite obtener la longitud probable de la clave.
 - Este algoritmo es más seguro que el Cifrado César, pero aún vulnerable a criptoanálisis en casos modernos.
+
 
   ## Equipo 3
 
