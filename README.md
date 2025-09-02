@@ -16,8 +16,6 @@
 - Hernández Hernández Deissy Jovita
 - Mendoza Rodríguez Ángel Jesús
 - **[Tu Nombre]** - *(Agregar tu nombre aquí)*
--
--
 
 
 ## 📋 Descripción
@@ -43,9 +41,9 @@ Este repositorio contiene todas las prácticas, tareas y proyectos desarrollados
 | # | Práctica | Descripción | Estado |
 |---|----------|-------------|---------|
 | 1 | Cifrado César | Implementación del cifrado por desplazamiento | ✅ Completado |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| 2 | Cifrado Vigenére | Implementación del cifrado Vigenére + Kasiski | ✅ Completado |
+| 3 | Cifrado Playfair |  | ✅ Completado |
+| 4 | Cifrado Vernam |  | ✅ Completado |
 |  |  |  |  |
 
 ## 🎓 Criterios de Evaluación
