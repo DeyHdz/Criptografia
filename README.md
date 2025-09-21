@@ -42,9 +42,10 @@ Este repositorio contiene todas las prácticas, tareas y proyectos desarrollados
 |---|----------|-------------|---------|
 | 1 | Cifrado César | Implementación del cifrado por desplazamiento | ✅ Completado |
 | 2 | Cifrado Vigenére | Implementación del cifrado Vigenére + Kasiski | ✅ Completado |
-| 3 | Cifrado Playfair |  | ✅ Completado |
+| 3 | Cifrado Wheatstone |  | ✅ Completado |
 | 4 | Cifrado Vernam |  | ✅ Completado |
-|  |  |  |  |
+| 5 | Cifrado Hill |  | ✅ Completado |
+| 6 | Algoritmo Euclides Extendido | ✅ Completado |
 
 ## 🎓 Criterios de Evaluación
 
